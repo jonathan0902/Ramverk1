@@ -82,21 +82,6 @@
     /**
      * Show the menu when clicking on the closed (mobile) menu button.
      */
-    menuButton.addEventListener("click", function(event) {
-        // Toggle display of menu
-        menu.classList.toggle("rm-clicked");
-        menuButton.classList.toggle("rm-clicked");
-        body.classList.toggle("rm-modal");
-
-        // Toggle between desktop and mobile menu when no max menu enabled.
-        if (menuMax === null) {
-            menu.classList.toggle("rm-mobile");
-            menu.classList.toggle("rm-desktop");
-        }
-
-        event.preventDefault();
-        event.stopPropagation();
-    });
 
 
 

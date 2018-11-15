@@ -103,8 +103,7 @@ $route = "route-" . str_replace("/", "-", $di->get("request")->getRoute());
             <button id="trigger-overlay" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
         </div>
     </div>
-
-<?php if ($_SERVER['REQUEST_URI'] == "/dbwebb/ramverk1/me/redovisa/htdocs/") : ?>
+<?php if ($di->request->getRoute() == "") : ?>
         <div class="callbacks_container">
                     <div class="banner-top">
                         <div class="banner-info-wthree">

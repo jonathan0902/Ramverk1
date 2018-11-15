@@ -37,14 +37,20 @@ class IPController implements ContainerInjectableInterface
         return json_encode($empty, JSON_PRETTY_PRINT);
     }
 
-    public function ipSelfActionGet($iptest = "212.212.100.110") : string
+    public function ipSelfActionGet($iptest = "212.212.100.110")
     {
+        $iptest = $this->di->request->getGet('ip', "212.212.100.110");
         $empty = [];
         if (filter_var($iptest, FILTER_VALIDATE_IP)) {
             $empty[0] = ["ip" => "$iptest is a valid IP address"];
         } else {
             $empty[0] = ["ip" => "$iptest is not a valid IP address"];
         }
-        return json_encode($empty, JSON_PRETTY_PRINT);
+        $page = $this->di->get("page");
+        $print = json_encode($empty, JSON_PRETTY_PRINT);
+        $page->add("ip/ip", [
+            "print" => $print
+        ]);
+        return $page->render();
     }
 }
