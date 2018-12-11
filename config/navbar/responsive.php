@@ -45,6 +45,16 @@ return [
             "title" => "Test ip.",
         ],
         [
+            "text" => "Weather",
+            "url" => "weather",
+            "title" => "Weather.",
+        ],
+        [
+            "text" => "Rest Api",
+            "url" => "restapi",
+            "title" => "Rest api.",
+        ],
+        [
             "text" => "Verktyg",
             "url" => "verktyg",
             "title" => "Verktyg och möjligheter för utveckling.",

@@ -736,6 +736,11 @@ p.sub-p{
     color: white;
 }
 
+.map {
+    height: 400px;
+    width: 100%;
+}
+
 .form-class {
     width: 40%;
     margin: auto;

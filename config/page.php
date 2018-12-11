@@ -26,12 +26,15 @@ return [
                 "css/font-awesome.css"
             ],
             "javascripts" => [
+                "js/jquery.js",
+                "js/ol.js",
                 "js/bootstrap-3.1.1.min.js",
                 "js/responsive-menu.js",
                 "js/modernizr-2.6.2.min.js",
                 "js/classie.js",
                 "js/easing.js",
                 "js/demo1.js",
+                "js/map.js",
             ],
         ],
     ],
